@@ -1,10 +1,10 @@
 import React from "react";
 
-export const Text = ({
+export const Text = <T extends React.ElementType>({
   as,
   children,
 }: {
-  as?: any;
+  as?: T;
   children: React.ReactNode;
 }) => {
   const Component = as || "span";
