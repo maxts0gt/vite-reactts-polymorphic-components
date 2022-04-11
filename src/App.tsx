@@ -1,7 +1,12 @@
 import React from "react";
+import { Text } from "./components";
 
-function App() {
-  return <div>Text</div>;
+export default function App() {
+  return (
+    <div className="App">
+      <Text as="h1"> Hello Polymorphic Components!</Text>
+      <Text as="h2"> Let's master you!</Text>
+      <Text>Nothing will show span!</Text>
+    </div>
+  );
 }
-
-export default App;
