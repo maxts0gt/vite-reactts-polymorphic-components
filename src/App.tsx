@@ -2,6 +2,14 @@ import React from "react";
 
 import { Text } from "./components";
 
+const customTag = ({ children }: { children: React.ReactText }) => {
+  return (
+    <em style={{ background: "teal", color: "white", fontSize: "24px" }}>
+      {children}
+    </em>
+  );
+};
+
 export default function App() {
   return (
     <div className="App">
@@ -10,6 +18,8 @@ export default function App() {
       <Text as="a" href="https://google.com">
         Nothing will show span!
       </Text>
+      <br />
+      <Text as={customTag}>This is a custom tag!</Text>
     </div>
   );
 }
